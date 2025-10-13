@@ -20,13 +20,13 @@
 
 {{-- Thanh menu ngang --}}
 <div class="bg-white py-2 ps-4 border-bottom">
-    <a href="#" class="text-secondary text-decoration-none me-4">
+    <a href="/admin/users" class="text-secondary text-decoration-none me-4">
         👥 Quản lý người dùng
     </a>
     <a href="#" class="text-secondary text-decoration-none me-4">
         🏷️ Quản lý thể loại
     </a>
-    <a href="#" class="fw-bold text-primary text-decoration-none me-4">
+    <a href="/admin/products" class="text-secondary text-decoration-none me-4">
         📚 Quản lý sản phẩm
     </a>
     <a href="#" class="text-secondary text-decoration-none me-4">
