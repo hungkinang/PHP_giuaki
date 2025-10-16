@@ -20,13 +20,15 @@ class UserController extends Controller
     }
 
     public function store(Request $request)
-{
+    {
     $data = $request->all();
-    $data['gender'] = $request->gender === 'true' ? 1 : 0;
+    $data['gender'] = $request->gender === 'true' || $request->gender === '1' ? 1 : 0;
+
     User::create($data);
 
     return redirect()->route('admin.users.index')->with('success', 'Thêm người dùng thành công');
-}
+    }
+
 
     public function show($id)
     {
@@ -42,10 +44,17 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $user->update($request->all());
-        return redirect()->route('admin.users.index')->with('success', 'Cập nhật thành công');
+    $user = User::findOrFail($id);
+
+    $data = $request->all();
+
+    $data['gender'] = $request->gender === 'true' || $request->gender === '1' ? 1 : 0;
+
+    $user->update($data);
+
+    return redirect()->route('admin.users.index')->with('success', 'Cập nhật thành công');
     }
+
 
     public function destroy($id)
     {
