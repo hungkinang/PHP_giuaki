@@ -59,7 +59,7 @@
                             <td>{{ number_format($p->price * (1 - $p->discount/100), 0, ',', '.') }}₫</td>
                             <td>{{ $p->quantity }}</td>
                             <td>{{ $p->totalBuy }}</td>
-                            <td>
+                            <td class="d-flex justify-content-evenly">
                                 <a href="#" class="btn btn-sm btn-primary">Xem</a>
                                 <a href="#" class="btn btn-sm btn-success">Sửa</a>
                                 <a href="#" class="btn btn-sm btn-danger">Xóa</a>
@@ -77,4 +77,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<style>
+.small.text-muted { display: none !important; }
+</style>
+
 </html>
