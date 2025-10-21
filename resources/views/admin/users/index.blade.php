@@ -24,11 +24,8 @@
     </script>
 </head>
 <body>
-
-    {{-- Gọi header --}}
     @include('layouts.header')
 
-    {{-- Nội dung --}}
     <div class="container-fluid mt-3">
         <div class="bg-white p-3 border rounded shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-3">

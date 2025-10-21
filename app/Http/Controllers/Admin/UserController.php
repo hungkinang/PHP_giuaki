@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::orderBy('id', 'asc')->paginate(3);
+        $users = User::orderBy('id', 'asc')->paginate(5);
         return view('admin.users.index', compact('users'));
     }
 
@@ -20,13 +20,13 @@ class UserController extends Controller
     }
 
     public function store(Request $request)
-{
+    {
     $data = $request->all();
     $data['gender'] = $request->gender === 'true' ? 1 : 0;
     User::create($data);
 
     return redirect()->route('admin.users.index')->with('success', 'Thêm người dùng thành công');
-}
+    }
 
     public function show($id)
     {
