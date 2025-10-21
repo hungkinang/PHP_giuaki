@@ -21,13 +21,13 @@
 {{-- Thanh menu ngang --}}
 <div class="bg-white py-2 ps-4 border-bottom">
     <a href="/admin/users" class="text-secondary text-decoration-none me-4">
-        👥 Quản lý người dùng
+        Quản lý người dùng
     </a>
     <a href="/admin/categories" class="text-secondary text-decoration-none me-4">
-        🏷️ Quản lý thể loại
+        Quản lý thể loại
     </a>
     <a href="/admin/products" class="text-secondary text-decoration-none me-4">
-        📚 Quản lý sản phẩm
+    Quản lý sản phẩm
     </a>
     <a href="/admin/orders" class="text-secondary text-decoration-none">
         🧾 Quản lý đơn hàng
