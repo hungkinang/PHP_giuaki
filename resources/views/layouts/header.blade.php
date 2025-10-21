@@ -29,10 +29,7 @@
     <a href="/admin/products" class="text-secondary text-decoration-none me-4">
         📚 Quản lý sản phẩm
     </a>
-    <a href="#" class="text-secondary text-decoration-none me-4">
-        ⭐ Quản lý đánh giá
-    </a>
-    <a href="#" class="text-secondary text-decoration-none">
+    <a href="/admin/orders" class="text-secondary text-decoration-none">
         🧾 Quản lý đơn hàng
     </a>
 </div>

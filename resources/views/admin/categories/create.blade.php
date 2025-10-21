@@ -25,13 +25,11 @@
     </style>
 </head>
 <body>
-    {{-- Header --}}
     @include('layouts.header')
 
 <div class="container mt-5">
     <h4 class="mb-4 fw-bold">Thêm thể loại</h4>
 
-    {{-- Hiển thị lỗi validate --}}
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="mb-0">
