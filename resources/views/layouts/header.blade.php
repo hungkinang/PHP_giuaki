@@ -13,7 +13,7 @@
                 <i class="bi bi-window me-1"></i> Client
             </a>
             <span class="me-2">Xin chào <strong>T3H ADMIN!</strong></span>
-            <a href="#" class="btn btn-light btn-sm border">Đăng xuất</a>
+            <a href="{{ route('admin.logout') }}" class="btn btn-light btn-sm border">Đăng xuất</a>
         </div>
     </div>
 </nav>
