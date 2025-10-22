@@ -8,22 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    {{-- Gọi header --}}
     @include('layouts.header')
 
     <div class="container mt-4">
-        <h4 class="fw-bold mb-3"> Chi tiết sản phẩm</h4>
+        <h4 class="fw-bold mb-3">Chi tiết sản phẩm</h4>
 
         <div class="card shadow-sm">
             <div class="row g-0">
                 <div class="col-md-4 text-center p-3">
-                    @if($product->image)
-                        <img src="{{ asset('uploads/products/' . $product->image) }}" alt="Ảnh sản phẩm" class="img-fluid rounded">
-                    @elseif($product->imageName)
-                        <img src="{{ asset('storage/' . $product->imageName) }}" alt="Ảnh sản phẩm" class="img-fluid rounded">
-                    @else
-                        <img src="https://via.placeholder.com/200x250?text=No+Image" class="img-fluid rounded" alt="No image">
-                    @endif
+                    @if($product->imageName)
+                    <img src="{{ asset('storage/product/image/' . $product->imageName) }}"
+                         alt="Ảnh sản phẩm" class="img-fluid rounded">
+                @else
+                    <img src="https://via.placeholder.com/200x250?text=No+Image"
+                         class="img-fluid rounded" alt="No image">
+                @endif                
                 </div>
 
                 <div class="col-md-8">
@@ -34,15 +33,6 @@
                         <p><strong>Giảm giá:</strong> {{ $product->discount ?? 0 }}%</p>
                         <p><strong>Số lượng:</strong> {{ $product->quantity }}</p>
                         <p><strong>Lượt mua:</strong> {{ $product->totalBuy ?? 0 }}</p>
-
-                        <p><strong>Thể loại:</strong>
-                            @if(isset($product->categories) && $product->categories->count())
-                                {{ $product->categories->pluck('name')->join(', ') }}
-                            @else
-                                <em>Chưa có</em>
-                            @endif
-                        </p>
-
                         <p><strong>Mô tả:</strong></p>
                         <p>{{ $product->description ?? 'Không có mô tả' }}</p>
 

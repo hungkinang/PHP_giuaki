@@ -14,7 +14,7 @@
     @include('layouts.header')
 
     <div class="container mt-4">
-        <h4 class="fw-bold mb-3">➕ Thêm sản phẩm</h4>
+        <h4 class="fw-bold mb-3"> Thêm sản phẩm</h4>
 
         <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data"
               class="bg-white p-4 border rounded shadow-sm">
@@ -68,7 +68,7 @@
 
                 <div class="col-md-12 mt-3">
                     <button type="submit" class="btn btn-success me-2">
-                        💾 Lưu sản phẩm
+                         Lưu sản phẩm
                     </button>
                     <a href="{{ route('admin.products.index') }}" class="btn btn-secondary">
                         ← Quay lại

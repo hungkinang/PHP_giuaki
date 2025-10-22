@@ -32,7 +32,7 @@
         <table class="table table-bordered table-hover align-middle">
             <thead class="table-light">
                 <tr>
-                    <th>#</th>
+                    <th>STT</th>
                     <th>ID</th>
                     <th>Hình</th>
                     <th>Tên thể loại</th>
@@ -47,7 +47,7 @@
                         <td>{{ $category->id }}</td>
                         <td>
                             @if ($category->imageName)
-                                <img src="{{ asset('storage/' . $category->imageName) }}" class="category-img" alt="Hình thể loại">
+                                <img src="{{ asset('storage/product/image/' . $category->imageName) }}" class="category-img" alt="Hình thể loại">
                             @else
                                 <span class="text-muted">Không có ảnh</span>
                             @endif

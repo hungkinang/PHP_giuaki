@@ -9,19 +9,23 @@ class Product extends Model
 {
     use HasFactory;
 
-    // Nếu bảng của bạn tên là "product" (số ít)
     protected $table = 'product';
 
-    // Cho phép fill các cột
     protected $fillable = [
         'name',
         'price',
         'discount',
         'quantity',
         'totalBuy',
-        'image',
+        'imageName',
         'description',
-        'created_at',
-        'updated_at'
+        'shop',
+        'createdAt',
+        'updatedAt',
+        'startsAt',
+        'endsAt'
     ];
+
+    // Nếu cột thời gian không phải created_at / updated_at mặc định:
+    public $timestamps = false;
 }

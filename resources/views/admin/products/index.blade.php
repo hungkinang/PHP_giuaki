@@ -34,7 +34,7 @@
             <table class="table table-bordered table-hover align-middle text-center">
                 <thead class="table-light">
                     <tr>
-                        <th>#</th>
+                        <th>id</th>
                         <th>Hình</th>
                         <th>Tên sản phẩm</th>
                         <th>Giá gốc</th>
@@ -50,8 +50,8 @@
                         <tr>
                             <td>{{ $p->id }}</td>
                             <td>
-                                <img src="{{ asset('uploads/products/' . $p->image) }}" 
-                                     alt="img" width="40" height="50" class="rounded">
+                                <img src="{{ asset('storage/product/image/' . $p->imageName) }}" 
+                                alt="img" width="40" height="50" class="rounded">                           
                             </td>
                             <td class="text-primary text-start">
                                 <a href="#" class="text-decoration-none text-primary">{{ $p->name }}</a>

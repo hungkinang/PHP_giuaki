@@ -18,7 +18,6 @@ class OrderController extends Controller
         $order = Orders::with('user', 'items.product')->findOrFail($id);
         return view('admin.orders.show', compact('order'));
     }
-
     public function create()
     {
         $users = User::all();

@@ -64,7 +64,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold">Hình ảnh</label><br>
                     @if ($product->image)
-                        <img src="{{ asset('uploads/products/' . $product->image) }}" alt="Hình hiện tại" width="100" class="rounded mb-2">
+                        <img src="{{ asset('storage/product/image/' . $product->image) }}" alt="Hình hiện tại" width="100" class="rounded mb-2">
                     @endif
                     <input type="file" name="image" class="form-control">
                 </div>
