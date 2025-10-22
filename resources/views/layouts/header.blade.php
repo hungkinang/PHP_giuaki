@@ -9,7 +9,7 @@
 
         {{-- Góc phải: Client + thông tin Admin --}}
         <div class="d-flex align-items-center">
-            <a href="#" class="text-decoration-none text-dark me-3 d-flex align-items-center">
+            <a href="/" target="_blank" class="text-decoration-none text-dark me-3 d-flex align-items-center">
                 <i class="bi bi-window me-1"></i> Client
             </a>
             <span class="me-2">Xin chào <strong>T3H ADMIN!</strong></span>
@@ -19,17 +19,20 @@
 </nav>
 
 {{-- Thanh menu ngang --}}
-<div class="bg-white py-2 ps-4 border-bottom">
-    <a href="/admin/users" class="text-secondary text-decoration-none me-4">
-        Quản lý người dùng
+<div class="bg-white py-2 ps-4 border-bottom d-flex align-items-center">
+    <a href="{{ route('admin.dashboard') }}" class="me-4 text-decoration-none {{ request()->is('admin/dashboard') ? 'fw-bold text-primary' : 'text-secondary' }}">
+         Dashboard
     </a>
-    <a href="/admin/categories" class="text-secondary text-decoration-none me-4">
-        Quản lý thể loại
+    <a href="{{ route('admin.users.index') }}" class="me-4 text-decoration-none {{ request()->is('admin/users*') ? 'fw-bold text-primary' : 'text-secondary' }}">
+         Quản lý người dùng
     </a>
-    <a href="/admin/products" class="text-secondary text-decoration-none me-4">
-    Quản lý sản phẩm
+    <a href="{{ route('admin.categories.index') }}" class="me-4 text-decoration-none {{ request()->is('admin/categories*') ? 'fw-bold text-primary' : 'text-secondary' }}">
+         Quản lý thể loại
     </a>
-    <a href="/admin/orders" class="text-secondary text-decoration-none">
-        🧾 Quản lý đơn hàng
+    <a href="{{ route('admin.products.index') }}" class="me-4 text-decoration-none {{ request()->is('admin/products*') ? 'fw-bold text-primary' : 'text-secondary' }}">
+         Quản lý sản phẩm
+    </a>
+    <a href="{{ route('admin.orders.index') }}" class="text-decoration-none {{ request()->is('admin/orders*') ? 'fw-bold text-primary' : 'text-secondary' }}">
+         Quản lý đơn hàng
     </a>
 </div>
