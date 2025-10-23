@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Orders;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class OrderController extends Controller
 {
@@ -18,32 +19,7 @@ class OrderController extends Controller
         $order = Orders::with('user', 'items.product')->findOrFail($id);
         return view('admin.orders.show', compact('order'));
     }
-    public function create()
-    {
-        $users = User::all();
-        return view('admin.orders.create', compact('users'));
-    }
-
-    public function store(Request $request)
-    {
-        $request->validate([
-            'userId' => 'required|exists:user,id',
-            'status' => 'required|string|max:255',
-            'deliveryMethod' => 'required|string|max:255',
-            'deliveryPrice' => 'required|numeric',
-        ]);
-
-        Orders::create([
-            'userId' => $request->userId,
-            'status' => $request->status,
-            'deliveryMethod' => $request->deliveryMethod,
-            'deliveryPrice' => $request->deliveryPrice,
-            'createdAt' => now(),
-            'updatedAt' => now(),
-        ]);
-
-        return redirect()->route('admin.orders.index')->with('success', 'Tạo đơn hàng mới thành công!');
-    }
+    
 
     public function edit($id)
     {

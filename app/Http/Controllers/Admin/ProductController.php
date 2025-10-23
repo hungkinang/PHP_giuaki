@@ -20,10 +20,9 @@ class ProductController extends Controller
 
     public function create()
     {
-        // Lấy toàn bộ thể loại từ DB
+
         $categories = Category::all();
     
-        // Trả về view và truyền biến $categories sang
         return view('admin.products.create', compact('categories'));
     }
 
@@ -57,7 +56,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
-        $categories = \App\Models\Category::all(); // Lấy tất cả category từ DB
+        $categories = \App\Models\Category::all(); 
         return view('admin.products.edit', compact('product', 'categories'));
     }
     
@@ -76,11 +75,9 @@ class ProductController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            // Xoá ảnh cũ
             if ($product->imageName && Storage::disk('public')->exists('product/image/' . $product->imageName)) {
                 Storage::disk('public')->delete('product/image/' . $product->imageName);
             }
-            // Lưu ảnh mới
             $path = $request->file('image')->store('product/image', 'public');
             $data['imageName'] = basename($path);
         }
@@ -94,19 +91,19 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
     
-        // 🧹 1. Xoá tất cả các bản ghi liên quan trong các bảng phụ
+
         DB::table('product_category')->where('productId', $product->id)->delete();
         DB::table('product_review')->where('productId', $product->id)->delete();
         DB::table('order_item')->where('productId', $product->id)->delete();
         DB::table('cart_item')->where('productId', $product->id)->delete();
         DB::table('wishlist_item')->where('productId', $product->id)->delete();
     
-        // 🖼️ 2. Xoá ảnh nếu có
+
         if ($product->imageName && Storage::disk('public')->exists('product/image/' . $product->imageName)) {
             Storage::disk('public')->delete('product/image/' . $product->imageName);
         }
     
-        // 🗑️ 3. Cuối cùng mới xoá sản phẩm chính
+
         $product->delete();
     
         return redirect()->route('admin.products.index')->with('success', 'Xóa sản phẩm thành công');

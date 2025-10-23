@@ -49,7 +49,19 @@
         <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
     </form>
 
-    @if(session('error'))
+    {{-- Hiển thị lỗi validation --}}
+    @if ($errors->any())
+        <div class="alert alert-danger mt-3">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    {{-- Hoặc hiển thị lỗi từ session nếu controller dùng with('error') --}}
+    @if (session('error'))
         <div class="alert alert-danger mt-3">{{ session('error') }}</div>
     @endif
 </div>

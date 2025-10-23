@@ -13,37 +13,27 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // ✅ Tính tổng doanh thu: chỉ tính các đơn đã hoàn thành (status = 3)
-        $totalRevenue = Orders::where('status', 3)->sum('deliveryPrice');
-
-        // ✅ Tổng số đơn hàng
+        $totalRevenue = Orders::where('status', 2)->sum('deliveryPrice');
         $totalOrders = Orders::count();
-
-        // ✅ Tổng số khách hàng
         $totalUsers = User::count();
-
-        // ✅ Tổng số sản phẩm
+        $totalCategories = Category::count();
         $totalProducts = Product::count();
 
-        // ✅ Lấy 5 đơn hàng mới nhất
         $latestOrders = Orders::with('user')
             ->orderBy('created_at', 'desc')
             ->take(5)
             ->get();
 
-        // ✅ Xử lý format hiển thị ngày + giá tiền
         foreach ($latestOrders as $order) {
-            // Format ngày tạo
+
             $order->formatted_created_at = $order->created_at
                 ? Carbon::parse($order->created_at)->format('d/m/Y H:i')
                 : 'Không xác định';
 
-            // Format giá tiền
             $order->formatted_delivery_price = $order->deliveryPrice !== null
                 ? number_format((float)$order->deliveryPrice, 0, ',', '.')
                 : '0';
 
-            // Gán text trạng thái để view hiển thị dễ hiểu
             $order->status_text = match ($order->status) {
                 1 => 'Mới tạo',
                 2 => 'Đang xử lý',
@@ -52,11 +42,11 @@ class DashboardController extends Controller
             };
         }
 
-        // ✅ Trả dữ liệu ra view
         return view('admin.dashboard', compact(
             'totalRevenue',
             'totalOrders',
             'totalUsers',
+            'totalCategories',
             'totalProducts',
             'latestOrders'
         ));
