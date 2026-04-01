@@ -1,61 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+#  Dự án: Website Quản Lý Bookshop
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+##  Giới thiệu
+Dự án **Website Quản Lý Bookshop** được phát triển nhằm hỗ trợ quản lý cửa hàng sách một cách tiện lợi, hiện đại và hiệu quả.  
+Hệ thống cho phép quản lý các **danh mục sách, sản phẩm, người dùng, đơn hàng** và hiển thị **thống kê doanh thu trực quan** thông qua Dashboard.  
+Website được xây dựng bằng **Laravel Framework**, kết hợp với **Blade Template** để tạo giao diện thân thiện và dễ sử dụng cho cả người quản trị lẫn khách hàng.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##  Mục tiêu
+- Giúp chủ cửa hàng dễ dàng quản lý sách, đơn hàng, người dùng và doanh thu.  
+- Tự động hóa quy trình quản lý thay vì ghi chép thủ công.  
+- Cung cấp giao diện trực quan, dễ thao tác.  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##  Công nghệ sử dụng
+- **Ngôn ngữ lập trình:** PHP (Laravel Framework)  
+- **Cơ sở dữ liệu:** MySQL  
+- **Giao diện:** HTML, CSS, Bootstrap, Blade Template  
+- **Công cụ:** GitHub, Composer, Artisan  
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##  Thành viên nhóm
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| STT | Họ và tên | Mã sinh viên | Nhiệm vụ phụ trách |
+|-----|------------|---------------|--------------------|
+| 1 | **Nguyễn Minh Đức** | 23010634 | Thiết kế giao diện chung, quản lý Dashboard, quản lý Orders |
+| 2 | **Ngô Văn Hưng** | 23010622 | Quản lý Users, Categories, Products, chức năng Login |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📈 Kết quả đạt được
+- Hoàn thiện website quản lý cửa hàng sách với đầy đủ chức năng CRUD.  
+- Giao diện trực quan, dễ sử dụng cho người quản trị.  
+- Dashboard thể hiện rõ tình hình doanh thu và hoạt động kinh doanh.  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+##  Hướng phát triển
+- Phát triển thêm tính năng tìm kiếm nâng cao.  
+- Tích hợp thanh toán trực tuyến.  
+- Triển khai hệ thống phân quyền chi tiết hơn cho nhiều loại tài khoản.  
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##  Giảng viên hướng dẫn
+**Cô:** **Nguyễn Thị Thuỳ Liên**

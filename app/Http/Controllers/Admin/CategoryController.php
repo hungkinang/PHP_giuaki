@@ -73,4 +73,5 @@ class CategoryController extends Controller
         Category::destroy($id);
         return redirect()->route('admin.categories.index')->with('success', 'Xóa thành công');
     }
+    
 }
